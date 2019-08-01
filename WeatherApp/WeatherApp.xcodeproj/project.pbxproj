@@ -16,6 +16,9 @@
 		8788754422F35F3E00C62F6C /* WeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788754322F35F3E00C62F6C /* WeekViewController.swift */; };
 		8788754722F3615600C62F6C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788754622F3615600C62F6C /* UIViewController.swift */; };
 		8788754922F361FE00C62F6C /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788754822F361FE00C62F6C /* UIStoryboard.swift */; };
+		8788754C22F36E2900C62F6C /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788754B22F36E2900C62F6C /* WeatherRequest.swift */; };
+		8788754F22F3701000C62F6C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788754E22F3701000C62F6C /* Configuration.swift */; };
+		8788755222F3911500C62F6C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755122F3911500C62F6C /* RootViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		8788754322F35F3E00C62F6C /* WeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewController.swift; sourceTree = "<group>"; };
 		8788754622F3615600C62F6C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		8788754822F361FE00C62F6C /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		8788754B22F36E2900C62F6C /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
+		8788754E22F3701000C62F6C /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		8788755122F3911500C62F6C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,8 @@
 		8788752522F3586B00C62F6C /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				8788754D22F36FF800C62F6C /* Configuration */,
+				8788754A22F36E1400C62F6C /* Models */,
 				8788754522F3611A00C62F6C /* Extensions */,
 				8788753D22F35A2900C62F6C /* Supporting Files */,
 				8788753C22F35A0E00C62F6C /* Resources */,
@@ -92,6 +100,7 @@
 		8788753A22F3592700C62F6C /* Root View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8788755022F390F400C62F6C /* View Models */,
 				8788752822F3586B00C62F6C /* RootViewController.swift */,
 			);
 			path = "Root View Controller";
@@ -154,6 +163,30 @@
 				8788754822F361FE00C62F6C /* UIStoryboard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8788754A22F36E1400C62F6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8788754B22F36E2900C62F6C /* WeatherRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8788754D22F36FF800C62F6C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8788754E22F3701000C62F6C /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		8788755022F390F400C62F6C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				8788755122F3911500C62F6C /* RootViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +265,9 @@
 				8788752722F3586B00C62F6C /* AppDelegate.swift in Sources */,
 				8788754422F35F3E00C62F6C /* WeekViewController.swift in Sources */,
 				8788754122F35E6500C62F6C /* DayViewController.swift in Sources */,
+				8788754C22F36E2900C62F6C /* WeatherRequest.swift in Sources */,
+				8788754F22F3701000C62F6C /* Configuration.swift in Sources */,
+				8788755222F3911500C62F6C /* RootViewModel.swift in Sources */,
 				8788754722F3615600C62F6C /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

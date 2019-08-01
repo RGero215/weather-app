@@ -12,6 +12,16 @@ final class RootViewController: UIViewController {
     
     // MARK: - Properties
     
+    var viewModel: RootViewModel? {
+        didSet {
+            guard let viewModel = viewModel else {
+                return
+            }
+            
+            setupViewModel(with: viewModel)
+        }
+    }
+    
     private let dayViewController: DayViewController = {
         guard let dayViewController = UIStoryboard.main.instantiateViewController(withIdentifier: DayViewController.storyboardIdentifier) as? DayViewController else {
             fatalError("Unable to Instantiate Day View Controller")
@@ -41,6 +51,7 @@ final class RootViewController: UIViewController {
         
         // Setup Child View Controllers
         setupChildViewControllers()
+        
     }
     
     // MARK: - Helper Methods
@@ -65,7 +76,16 @@ final class RootViewController: UIViewController {
         dayViewController.didMove(toParent: self)
         weekViewController.didMove(toParent: self)
         
-        
+    }
+    
+    private func setupViewModel(with viewModel: RootViewModel) {
+        viewModel.didFetchWeatherData = { (data, error) in
+            if let error = error {
+                print("Unable to Fetch Weather Data (\(error))")
+            } else if let data = data {
+                print(data)
+            }
+        }
     }
 
 }
