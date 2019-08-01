@@ -86,8 +86,8 @@ final class RootViewController: UIViewController {
         viewModel.didFetchWeatherData = { [weak self] (data, error) in
             if let _ = error {
                 self?.presentAlert(of: .noWeatherDataAvailable)
-            } else if let data = data {
-                print(data)
+            } else if let data = data as? DarkSkyResponse {
+                print(data.daily)
             } else {
                 self?.presentAlert(of: .noWeatherDataAvailable)
             }

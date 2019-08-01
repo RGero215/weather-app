@@ -10,19 +10,26 @@ import Foundation
 
 class RootViewModel {
     
+    // MARK: - Types
+    
     enum WeatherDataError: Error {
         case noWeatherDataAvailable
     }
     
-    typealias DidfetchWeatherDataCompletion = (DarkSkyResponse?, WeatherDataError?) -> Void
+    // MARK: - Type Aliases
+    
+    typealias DidfetchWeatherDataCompletion = (WeatherData?, WeatherDataError?) -> Void
     
     var didFetchWeatherData: DidfetchWeatherDataCompletion?
     
+    // MARK: - Initialization
+    
     init() {
+        // Fectch Weather Data
         fetchWeatherData()
     }
     
-    // MARK: -
+    // MARK: - Helper Methods
     
     private func fetchWeatherData() {
         //Create URL

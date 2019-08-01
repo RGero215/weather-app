@@ -20,6 +20,7 @@
 		8788754F22F3701000C62F6C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788754E22F3701000C62F6C /* Configuration.swift */; };
 		8788755222F3911500C62F6C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755122F3911500C62F6C /* RootViewModel.swift */; };
 		8788755422F39D7000C62F6C /* DarkSkyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755322F39D7000C62F6C /* DarkSkyResponse.swift */; };
+		8788755722F3A6CC00C62F6C /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755622F3A6CC00C62F6C /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8788754E22F3701000C62F6C /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		8788755122F3911500C62F6C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		8788755322F39D7000C62F6C /* DarkSkyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyResponse.swift; sourceTree = "<group>"; };
+		8788755622F3A6CC00C62F6C /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		8788752522F3586B00C62F6C /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				8788755522F3A6B200C62F6C /* Protocols */,
 				8788754D22F36FF800C62F6C /* Configuration */,
 				8788754A22F36E1400C62F6C /* Models */,
 				8788754522F3611A00C62F6C /* Extensions */,
@@ -192,6 +195,14 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
+		8788755522F3A6B200C62F6C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8788755622F3A6CC00C62F6C /* WeatherData.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +279,7 @@
 				8788752722F3586B00C62F6C /* AppDelegate.swift in Sources */,
 				8788754422F35F3E00C62F6C /* WeekViewController.swift in Sources */,
 				8788754122F35E6500C62F6C /* DayViewController.swift in Sources */,
+				8788755722F3A6CC00C62F6C /* WeatherData.swift in Sources */,
 				8788754C22F36E2900C62F6C /* WeatherRequest.swift in Sources */,
 				8788754F22F3701000C62F6C /* Configuration.swift in Sources */,
 				8788755222F3911500C62F6C /* RootViewModel.swift in Sources */,
