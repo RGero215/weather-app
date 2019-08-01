@@ -19,6 +19,7 @@
 		8788754C22F36E2900C62F6C /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788754B22F36E2900C62F6C /* WeatherRequest.swift */; };
 		8788754F22F3701000C62F6C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788754E22F3701000C62F6C /* Configuration.swift */; };
 		8788755222F3911500C62F6C /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755122F3911500C62F6C /* RootViewModel.swift */; };
+		8788755422F39D7000C62F6C /* DarkSkyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755322F39D7000C62F6C /* DarkSkyResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8788754B22F36E2900C62F6C /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		8788754E22F3701000C62F6C /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		8788755122F3911500C62F6C /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		8788755322F39D7000C62F6C /* DarkSkyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				8788754B22F36E2900C62F6C /* WeatherRequest.swift */,
+				8788755322F39D7000C62F6C /* DarkSkyResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				8788754C22F36E2900C62F6C /* WeatherRequest.swift in Sources */,
 				8788754F22F3701000C62F6C /* Configuration.swift in Sources */,
 				8788755222F3911500C62F6C /* RootViewModel.swift in Sources */,
+				8788755422F39D7000C62F6C /* DarkSkyResponse.swift in Sources */,
 				8788754722F3615600C62F6C /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

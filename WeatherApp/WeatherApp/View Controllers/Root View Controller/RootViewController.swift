@@ -10,6 +10,10 @@ import UIKit
 
 final class RootViewController: UIViewController {
     
+    private enum AlertType {
+        case noWeatherDataAvailable
+    }
+    
     // MARK: - Properties
     
     var viewModel: RootViewModel? {
@@ -79,13 +83,32 @@ final class RootViewController: UIViewController {
     }
     
     private func setupViewModel(with viewModel: RootViewModel) {
-        viewModel.didFetchWeatherData = { (data, error) in
-            if let error = error {
-                print("Unable to Fetch Weather Data (\(error))")
+        viewModel.didFetchWeatherData = { [weak self] (data, error) in
+            if let _ = error {
+                self?.presentAlert(of: .noWeatherDataAvailable)
             } else if let data = data {
                 print(data)
+            } else {
+                self?.presentAlert(of: .noWeatherDataAvailable)
             }
         }
+    }
+    
+    private func presentAlert(of alertType: AlertType) {
+        let title: String
+        let message: String
+        
+        switch alertType {
+        case .noWeatherDataAvailable:
+            title = "Unable to Fetch Weather Data"
+            message = "The application is unable to fetch weather data. Please make sure your device is connected over Wi-Fi or celular."
+        }
+        
+        let alerteController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alerteController.addAction(cancelAction)
+        present(alerteController, animated: true)
     }
 
 }
