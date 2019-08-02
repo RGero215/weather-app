@@ -42,23 +42,33 @@ class RootViewModel {
                 print("Status Code: \(response.statusCode)")
             }
             
-            if let error = error {
-                print("Unable to Fetch Weather Data \(error)")
-                
-                self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
-            } else if let data = data {
-                let decoder = JSONDecoder()
-                
-                do {
-                    let darkSkyResponse = try decoder.decode(DarkSkyResponse.self, from: data)
-                    self?.didFetchWeatherData?(darkSkyResponse, nil)
-                } catch {
-                    print("Unable to Decode JSON Response \(error)")
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Unable to Fetch Weather Data \(error)")
+                    
+                    self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
+                } else if let data = data {
+                    // Initialize JSON Decoder
+                    let decoder = JSONDecoder()
+                    
+                    // Set date decoder strategy
+                    decoder.dateDecodingStrategy = .secondsSince1970
+                    
+                    do {
+                        // Decode JSON Response
+                        let darkSkyResponse = try decoder.decode(DarkSkyResponse.self, from: data)
+                        // Invoke Completion Handler
+                        self?.didFetchWeatherData?(darkSkyResponse, nil)
+                    } catch {
+                        print("Unable to Decode JSON Response \(error)")
+                        // Invoke Completion Handler
+                        self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
+                    }
+                } else {
                     self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
                 }
-            } else {
-                self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
             }
-            }.resume()
+            
+        }.resume()
     }
 }

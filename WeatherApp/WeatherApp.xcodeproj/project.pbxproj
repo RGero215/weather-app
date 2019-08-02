@@ -23,6 +23,8 @@
 		8788755722F3A6CC00C62F6C /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755622F3A6CC00C62F6C /* WeatherData.swift */; };
 		8788755A22F3AC8300C62F6C /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755922F3AC8300C62F6C /* DayViewModel.swift */; };
 		8788755D22F3AD6600C62F6C /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755C22F3AD6600C62F6C /* WeekViewModel.swift */; };
+		8788755F22F48B1400C62F6C /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755E22F48B1400C62F6C /* Styles.swift */; };
+		8788756122F499D800C62F6C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788756022F499D800C62F6C /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		8788755622F3A6CC00C62F6C /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		8788755922F3AC8300C62F6C /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
 		8788755C22F3AD6600C62F6C /* WeekViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
+		8788755E22F48B1400C62F6C /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		8788756022F499D800C62F6C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 			children = (
 				8788754622F3615600C62F6C /* UIViewController.swift */,
 				8788754822F361FE00C62F6C /* UIStoryboard.swift */,
+				8788756022F499D800C62F6C /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				8788754E22F3701000C62F6C /* Configuration.swift */,
+				8788755E22F48B1400C62F6C /* Styles.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -297,10 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8788754922F361FE00C62F6C /* UIStoryboard.swift in Sources */,
+				8788755F22F48B1400C62F6C /* Styles.swift in Sources */,
 				8788752922F3586B00C62F6C /* RootViewController.swift in Sources */,
 				8788752722F3586B00C62F6C /* AppDelegate.swift in Sources */,
 				8788754422F35F3E00C62F6C /* WeekViewController.swift in Sources */,
 				8788754122F35E6500C62F6C /* DayViewController.swift in Sources */,
+				8788756122F499D800C62F6C /* UIImage.swift in Sources */,
 				8788755722F3A6CC00C62F6C /* WeatherData.swift in Sources */,
 				8788754C22F36E2900C62F6C /* WeatherRequest.swift in Sources */,
 				8788755D22F3AD6600C62F6C /* WeekViewModel.swift in Sources */,
