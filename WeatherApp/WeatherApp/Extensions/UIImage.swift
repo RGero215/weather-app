@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImage {
-    class func imageForIcom(with name: String) -> UIImage? {
+    class func imageForIcon(with name: String) -> UIImage? {
         switch name {
         case "clear-day",
              "clear-night",

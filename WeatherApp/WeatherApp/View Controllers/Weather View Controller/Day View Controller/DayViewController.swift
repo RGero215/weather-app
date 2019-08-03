@@ -39,6 +39,8 @@ final class DayViewController: UIViewController {
         }
     }
     
+    @IBOutlet var moodLabel: UILabel!
+    
     @IBOutlet var temperatureLabel: UILabel!
     
     @IBOutlet var windSpeedLabel: UILabel! 

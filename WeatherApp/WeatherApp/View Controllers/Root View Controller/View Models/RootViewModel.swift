@@ -10,6 +10,7 @@ import Foundation
 
 class RootViewModel {
     
+//    var mood =
     // MARK: - Types
     
     enum WeatherDataError: Error {
@@ -59,6 +60,7 @@ class RootViewModel {
                         let darkSkyResponse = try decoder.decode(DarkSkyResponse.self, from: data)
                         // Invoke Completion Handler
                         self?.didFetchWeatherData?(darkSkyResponse, nil)
+                        NotificationCenter.default.post(name: Notification.Name(rawValue: "mood"), object: nil)
                     } catch {
                         print("Unable to Decode JSON Response \(error)")
                         // Invoke Completion Handler

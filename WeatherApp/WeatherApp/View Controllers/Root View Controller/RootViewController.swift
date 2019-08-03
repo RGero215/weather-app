@@ -55,7 +55,12 @@ final class RootViewController: UIViewController {
         
         // Setup Child View Controllers
         setupChildViewControllers()
+        NotificationCenter.default.addObserver(self, selector: #selector(mood), name: Notification.Name(rawValue: "mood"), object: nil)
         
+    }
+    
+    @objc func mood(){
+        moodAlert(weather: dayViewController.descriptionLabel.text!)
     }
     
     // MARK: - Helper Methods
@@ -115,6 +120,31 @@ final class RootViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alerteController.addAction(cancelAction)
         present(alerteController, animated: true)
+    }
+    
+    func moodAlert(weather: String) {
+        let title = "Today is \(weather)"
+        let message = "How is the weather makes you feel today?"
+        
+        let alerteController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alerteController.addAction(UIAlertAction(title: "Happy", style: .default, handler: { action in
+            self.dayViewController.moodLabel.text = self.self.stringToEmojis(word: "Happy")
+        }))
+        
+        alerteController.addAction(UIAlertAction(title: "Not Happy", style: .default, handler: { action in
+            self.dayViewController.moodLabel.text = self.stringToEmojis(word: "Not Happy")
+        }))
+        
+        present(alerteController, animated: true)
+    }
+    
+    func stringToEmojis(word: String) -> String {
+        if word == "Happy" {
+            return "😀"
+        } else {
+            return "😩"
+        }
     }
 
 }

@@ -25,6 +25,8 @@
 		8788755D22F3AD6600C62F6C /* WeekViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755C22F3AD6600C62F6C /* WeekViewModel.swift */; };
 		8788755F22F48B1400C62F6C /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788755E22F48B1400C62F6C /* Styles.swift */; };
 		8788756122F499D800C62F6C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788756022F499D800C62F6C /* UIImage.swift */; };
+		8788756422F4B2F200C62F6C /* WeekDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788756322F4B2F200C62F6C /* WeekDayTableViewCell.swift */; };
+		8788756622F4BC4600C62F6C /* WeekDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8788756522F4BC4600C62F6C /* WeekDayViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		8788755C22F3AD6600C62F6C /* WeekViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekViewModel.swift; sourceTree = "<group>"; };
 		8788755E22F48B1400C62F6C /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		8788756022F499D800C62F6C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		8788756322F4B2F200C62F6C /* WeekDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayTableViewCell.swift; sourceTree = "<group>"; };
+		8788756522F4BC4600C62F6C /* WeekDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 		8788754222F35F1800C62F6C /* Week View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8788756222F4B25B00C62F6C /* Table View Cell */,
 				8788755822F3AC5A00C62F6C /* View Models */,
 				8788754322F35F3E00C62F6C /* WeekViewController.swift */,
 			);
@@ -219,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				8788755C22F3AD6600C62F6C /* WeekViewModel.swift */,
+				8788756522F4BC4600C62F6C /* WeekDayViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -229,6 +235,14 @@
 				8788755922F3AC8300C62F6C /* DayViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		8788756222F4B25B00C62F6C /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8788756322F4B2F200C62F6C /* WeekDayTableViewCell.swift */,
+			);
+			path = "Table View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +318,13 @@
 			files = (
 				8788754922F361FE00C62F6C /* UIStoryboard.swift in Sources */,
 				8788755F22F48B1400C62F6C /* Styles.swift in Sources */,
+				8788756422F4B2F200C62F6C /* WeekDayTableViewCell.swift in Sources */,
 				8788752922F3586B00C62F6C /* RootViewController.swift in Sources */,
 				8788752722F3586B00C62F6C /* AppDelegate.swift in Sources */,
 				8788754422F35F3E00C62F6C /* WeekViewController.swift in Sources */,
 				8788754122F35E6500C62F6C /* DayViewController.swift in Sources */,
 				8788756122F499D800C62F6C /* UIImage.swift in Sources */,
+				8788756622F4BC4600C62F6C /* WeekDayViewModel.swift in Sources */,
 				8788755722F3A6CC00C62F6C /* WeatherData.swift in Sources */,
 				8788754C22F36E2900C62F6C /* WeatherRequest.swift in Sources */,
 				8788755D22F3AD6600C62F6C /* WeekViewModel.swift in Sources */,
